@@ -110,6 +110,7 @@
     opacity: 1;
     transform: scale(1.5)
 }
+
 #navbar {
     position: fixed;
     display: flex;
@@ -122,9 +123,33 @@
     flex-wrap: wrap;
     justify-content: space-around;
     margin-bottom: 100px;
+    z-index: 10000;
 }
+
 #navbar a {
     color: white;
     text-decoration: none;
     padding: 10px 20px;
+}
+
+.gamecontainer {
+    display: flex;
+    width: 40vw;
+    height: 80vh;
+    border-radius: 15px;
+    border: 2px solid;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+    gap: 10px;
+    background-color: bisque;
+
+}
+.gamecontainer div{
+    width: 50%;
+    height: 50%;
+}
+#header{
+    margin-top: 10vh;
+    padding-top: 10vw;
 }
