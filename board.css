@@ -15,6 +15,7 @@
 }
 #navbar {
     position: fixed;
+    display: flex;
     top: 0;
     width: 100vw;
     background-color: #333;
@@ -22,6 +23,8 @@
     padding: 10px 0;
     text-align: center;
     flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 100px;
 }
 #navbar a {
     color: white;
@@ -34,6 +37,7 @@ display: flex;
 align-items: center;
 flex-direction: column;
 font-size: 2rem;
+flex-wrap: wrap;
 }
 #links {
     display: flex; 
@@ -52,18 +56,31 @@ font-size: 2rem;
     position: relative;
     display: inline-block;
 }
-
+body{
+    margin-top: 1vh;
+}
 .hover-images {
-    transition: opacity 0;
+    transition: opacity 0.3;
+    
 }
 
 .hover-images {
     position: absolute;
-    top: 0;
-    left: 0;
+    bottom: 50%;
+    right: 0;
+    width: 100%;
     opacity: 0;
     pointer-events: none;
     z-index: 900;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    display: flex;
+    transition: bottom 0.3s ease;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
 }
 
 .image-container:hover .hover-images {
@@ -86,3 +103,94 @@ body {
     color: brown;
     font-weight: bold;
 }
+.CartBtn {
+    width: 140px;
+    height: 40px;
+    border-radius: 12px;
+    border: none;
+    background-color: rgb(255, 208, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition-duration: .5s;
+    overflow: hidden;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.103);
+    position: relative;
+  }
+  
+  .IconContainer {
+    position: absolute;
+    left: -50px;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 2;
+    transition-duration: .5s;
+  }
+  
+  .icon {
+    border-radius: 1px;
+  }
+  
+  .text {
+    height: 100%;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(17, 17, 17);
+    z-index: 1;
+    transition-duration: .5s;
+    font-size: 1.04em;
+    font-weight: 600;
+  }
+  
+  .CartBtn:hover .IconContainer {
+    transform: translateX(58px);
+    border-radius: 40px;
+    transition-duration: .5s;
+  }
+  
+  .CartBtn:hover .text {
+    transform: translate(10px,0px);
+    transition-duration: .5s;
+  }
+  
+  .CartBtn:active {
+    transform: scale(0.95);
+    transition-duration: .5s;
+  }
+  .game {
+    padding: 17px 40px;
+    border-radius: 50px;
+    border: 0;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all .5s ease;
+    z-index: 500;
+   }
+   
+   .game:hover {
+    letter-spacing: 3px;
+    background-color: hsl(261deg 80% 48%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+   }
+   
+   .game:active {
+    letter-spacing: 3px;
+    background-color: hsl(261deg 80% 48%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+    transform: translateY(10px);
+    transition: 100ms;
+   }
